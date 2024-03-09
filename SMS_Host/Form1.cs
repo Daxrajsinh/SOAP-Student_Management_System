@@ -45,14 +45,13 @@ namespace SMS_Host
             updateServiceHost = new ServiceHost(typeof(SMS_Services.Services.UpdateService), updateServiceUri);
             updateServiceHost.Open();
 
-            label1.Text = "Service Running... !";
+            label1.Text = "Services Running... !";
         }
 
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
 
-            // Close all service hosts when the form is closed
             addServiceHost.Close();
             authenticationServiceHost.Close();
             deleteServiceHost.Close();

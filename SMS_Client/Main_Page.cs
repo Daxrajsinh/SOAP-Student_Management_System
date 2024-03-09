@@ -129,12 +129,16 @@ namespace SMS_Client
 
         private void button3_Click(object sender, EventArgs e)
         {
-            del_ServiceRef.DeleteServiceClient sc5 = new del_ServiceRef.DeleteServiceClient();
-            sc5.DeleteStudentData(Convert.ToInt32(textBox1.Text));
-            sc5.Close();
-            MessageBox.Show("Student data Deleted successfully!");
-            button4_Click(sender, e);
-            DisplayStudents();
+            if (textBox1.Text == "") MessageBox.Show("Missing Vital information !");
+            else
+            {
+                del_ServiceRef.DeleteServiceClient sc5 = new del_ServiceRef.DeleteServiceClient();
+                sc5.DeleteStudentData(Convert.ToInt32(textBox1.Text));
+                sc5.Close();
+                MessageBox.Show("Student data Deleted successfully!");
+                button4_Click(sender, e);
+                DisplayStudents();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
