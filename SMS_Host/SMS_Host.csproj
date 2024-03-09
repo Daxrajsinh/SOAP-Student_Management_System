@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CC9C0334-7AFF-441C-BEEF-9C6E8740A19C}</ProjectGuid>
+    <ProjectGuid>{E10366D4-51C0-4D07-8475-5113C6E468ED}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>SMS_Host</RootNamespace>
     <AssemblyName>SMS_Host</AssemblyName>
@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SMS_Services">
-      <HintPath>..\SMS_Services\bin\Debug\SMS_Services.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
@@ -82,6 +79,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMS_Services\SMS_Services.csproj">
+      <Project>{20ddfe67-22db-4e7d-bf94-98a77e3d81e2}</Project>
+      <Name>SMS_Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

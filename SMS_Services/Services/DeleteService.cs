@@ -9,6 +9,7 @@ using System.Text;
 
 namespace SMS_Services.Services
 {
+    [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
     public class DeleteService : IDeleteService
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["Con_string"].ConnectionString;
@@ -22,6 +23,11 @@ namespace SMS_Services.Services
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Id", id);
                 command.ExecuteNonQuery();
+
+                /*string deleteUserQuery = "DELETE FROM Users WHERE Id = @Id)";
+                SqlCommand deleteUserCommand = new SqlCommand(deleteUserQuery, connection);
+                deleteUserCommand.Parameters.AddWithValue("@Id", id);
+                deleteUserCommand.ExecuteNonQuery();*/
             }
         }
     }
