@@ -51,6 +51,8 @@
             button4 = new Button();
             button5 = new Button();
             label1 = new Label();
+            label10 = new Label();
+            button6 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -58,6 +60,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Controls.Add(button6);
             panel1.Controls.Add(comboBox2);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(label9);
@@ -100,11 +103,11 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(16, 19);
+            label9.Location = new Point(7, 21);
             label9.Name = "label9";
-            label9.Size = new Size(220, 20);
+            label9.Size = new Size(275, 20);
             label9.TabIndex = 14;
-            label9.Text = "Add New Student Record Here :";
+            label9.Text = "Add/Update New Student Record Here :";
             // 
             // textBox5
             // 
@@ -268,17 +271,40 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(598, 36);
+            label1.Location = new Point(592, 46);
             label1.Name = "label1";
             label1.Size = new Size(142, 20);
             label1.TabIndex = 8;
             label1.Text = "STUDENT RECORDS";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Location = new Point(553, 1);
+            label10.Name = "label10";
+            label10.Size = new Size(224, 41);
+            label10.TabIndex = 9;
+            label10.Text = "ADMIN PANEL";
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.Khaki;
+            button6.ForeColor = Color.Black;
+            button6.Location = new Point(60, 417);
+            button6.Name = "button6";
+            button6.Size = new Size(168, 29);
+            button6.TabIndex = 17;
+            button6.Text = "Manage COURSES";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // Main_Page
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1095, 491);
+            Controls.Add(label10);
             Controls.Add(label1);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -321,5 +347,7 @@
         private TextBox textBox3;
         private ComboBox comboBox2;
         private ComboBox comboBox1;
+        private Label label10;
+        private Button button6;
     }
 }

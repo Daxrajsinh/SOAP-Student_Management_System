@@ -151,5 +151,12 @@ namespace SMS_Client
             comboBox1.Text = "";
             comboBox2.Text = "";
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Courses_page obj = new Courses_page();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

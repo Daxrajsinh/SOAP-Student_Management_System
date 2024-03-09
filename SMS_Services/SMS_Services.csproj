@@ -54,7 +54,9 @@
     <Compile Include="Services\IAuthenticationService.cs" />
     <Compile Include="Services\IDeleteService.cs" />
     <Compile Include="Services\IDisplayService.cs" />
+    <Compile Include="Services\IManageCourse.cs" />
     <Compile Include="Services\IUpdateService.cs" />
+    <Compile Include="Services\ManageCourse.cs" />
     <Compile Include="Services\UpdateService.cs" />
   </ItemGroup>
   <ItemGroup>

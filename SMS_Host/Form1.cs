@@ -12,6 +12,7 @@ namespace SMS_Host
         private ServiceHost deleteServiceHost;
         private ServiceHost displayServiceHost;
         private ServiceHost updateServiceHost;
+        private ServiceHost ManageCourseserviceHost;
 
         public Form1()
         {
@@ -44,6 +45,11 @@ namespace SMS_Host
             Uri updateServiceUri = new Uri("net.tcp://localhost:8004/Design_Time_Addresses/SMS_Services/Services/UpdateService/");
             updateServiceHost = new ServiceHost(typeof(SMS_Services.Services.UpdateService), updateServiceUri);
             updateServiceHost.Open();
+
+            //Host ManageCourseService
+            Uri manageCourseServiceUri = new Uri("net.tcp://localhost:8005/Design_Time_Addresses/SMS_Services/Services/ManageCourse/");
+            ManageCourseserviceHost = new ServiceHost(typeof(SMS_Services.Services.ManageCourse), manageCourseServiceUri);
+            ManageCourseserviceHost.Open();
 
             label1.Text = "Services Running... !";
         }
