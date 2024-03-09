@@ -12,6 +12,10 @@ namespace SMS_Services.Services
     {
         [OperationContract]
         void UpdateStudentData(Student student);
+        [OperationContract]
+        void UpdateStudentGrade(int studentId, string grade);
+        [OperationContract]
+        void DeleteStudentGrade(int studentId);
     }
 
     /*

@@ -36,5 +36,7 @@ namespace SMS_Services.Services
 
         [DataMember]
         public string Fees_paid { get; set; }
+        [DataMember]
+        public string Grades { get; set; }
     }
 }

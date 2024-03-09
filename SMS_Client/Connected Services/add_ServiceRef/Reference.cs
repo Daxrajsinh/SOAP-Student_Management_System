@@ -20,6 +20,8 @@ namespace add_ServiceRef
         
         private string Fees_paidField;
         
+        private string GradesField;
+        
         private string SAddressField;
         
         private string SEmailField;
@@ -42,6 +44,19 @@ namespace add_ServiceRef
             set
             {
                 this.Fees_paidField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Grades
+        {
+            get
+            {
+                return this.GradesField;
+            }
+            set
+            {
+                this.GradesField = value;
             }
         }
         
@@ -125,7 +140,7 @@ namespace add_ServiceRef
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="add_ServiceRef2.IAddService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="add_ServiceRef.IAddService")]
     public interface IAddService
     {
         

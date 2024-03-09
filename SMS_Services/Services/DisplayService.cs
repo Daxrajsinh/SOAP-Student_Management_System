@@ -37,7 +37,8 @@ namespace SMS_Services.Services
                                 SEmail = reader["SEmail"].ToString(),
                                 SPhone_no = reader["SPhone_no"].ToString(),
                                 Sem = (int)reader["Sem"],
-                                Fees_paid = reader["Fees_paid"].ToString()
+                                Fees_paid = reader["Fees_paid"].ToString(),
+                                Grades = reader["Grades"].ToString()
                             };
                             students.Add(student);
                         }

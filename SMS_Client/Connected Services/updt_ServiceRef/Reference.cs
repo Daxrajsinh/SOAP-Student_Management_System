@@ -20,6 +20,8 @@ namespace updt_ServiceRef
         
         private string Fees_paidField;
         
+        private string GradesField;
+        
         private string SAddressField;
         
         private string SEmailField;
@@ -42,6 +44,19 @@ namespace updt_ServiceRef
             set
             {
                 this.Fees_paidField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Grades
+        {
+            get
+            {
+                return this.GradesField;
+            }
+            set
+            {
+                this.GradesField = value;
             }
         }
         
@@ -134,6 +149,18 @@ namespace updt_ServiceRef
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUpdateService/UpdateStudentData", ReplyAction="http://tempuri.org/IUpdateService/UpdateStudentDataResponse")]
         System.Threading.Tasks.Task UpdateStudentDataAsync(updt_ServiceRef.Student student);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUpdateService/UpdateStudentGrade", ReplyAction="http://tempuri.org/IUpdateService/UpdateStudentGradeResponse")]
+        void UpdateStudentGrade(int studentId, string grade);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUpdateService/UpdateStudentGrade", ReplyAction="http://tempuri.org/IUpdateService/UpdateStudentGradeResponse")]
+        System.Threading.Tasks.Task UpdateStudentGradeAsync(int studentId, string grade);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUpdateService/DeleteStudentGrade", ReplyAction="http://tempuri.org/IUpdateService/DeleteStudentGradeResponse")]
+        void DeleteStudentGrade(int studentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUpdateService/DeleteStudentGrade", ReplyAction="http://tempuri.org/IUpdateService/DeleteStudentGradeResponse")]
+        System.Threading.Tasks.Task DeleteStudentGradeAsync(int studentId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -194,6 +221,26 @@ namespace updt_ServiceRef
         public System.Threading.Tasks.Task UpdateStudentDataAsync(updt_ServiceRef.Student student)
         {
             return base.Channel.UpdateStudentDataAsync(student);
+        }
+        
+        public void UpdateStudentGrade(int studentId, string grade)
+        {
+            base.Channel.UpdateStudentGrade(studentId, grade);
+        }
+        
+        public System.Threading.Tasks.Task UpdateStudentGradeAsync(int studentId, string grade)
+        {
+            return base.Channel.UpdateStudentGradeAsync(studentId, grade);
+        }
+        
+        public void DeleteStudentGrade(int studentId)
+        {
+            base.Channel.DeleteStudentGrade(studentId);
+        }
+        
+        public System.Threading.Tasks.Task DeleteStudentGradeAsync(int studentId)
+        {
+            return base.Channel.DeleteStudentGradeAsync(studentId);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

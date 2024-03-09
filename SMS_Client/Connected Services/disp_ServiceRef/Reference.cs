@@ -20,6 +20,8 @@ namespace disp_ServiceRef
         
         private string Fees_paidField;
         
+        private string GradesField;
+        
         private string SAddressField;
         
         private string SEmailField;
@@ -42,6 +44,19 @@ namespace disp_ServiceRef
             set
             {
                 this.Fees_paidField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Grades
+        {
+            get
+            {
+                return this.GradesField;
+            }
+            set
+            {
+                this.GradesField = value;
             }
         }
         

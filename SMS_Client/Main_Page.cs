@@ -158,5 +158,12 @@ namespace SMS_Client
             obj.Show();
             this.Hide();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Grades_page obj = new Grades_page();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

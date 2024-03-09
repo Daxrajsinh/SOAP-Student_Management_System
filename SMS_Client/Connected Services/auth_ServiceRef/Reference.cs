@@ -12,7 +12,7 @@ namespace auth_ServiceRef
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="auth_ServiceRef1.IAuthenticationService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="auth_ServiceRef.IAuthenticationService")]
     public interface IAuthenticationService
     {
         

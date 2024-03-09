@@ -8,7 +8,7 @@
       "System.Collections.Generic.Dictionary`2"
     ],
     "namespaceMappings": [
-      "*, auth_ServiceRef1"
+      "*, auth_ServiceRef"
     ],
     "sync": true,
     "targetFramework": "net6.0",

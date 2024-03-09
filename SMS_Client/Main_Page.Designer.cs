@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button6 = new Button();
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
             label9 = new Label();
@@ -52,7 +53,7 @@
             button5 = new Button();
             label1 = new Label();
             label10 = new Label();
-            button6 = new Button();
+            button7 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -60,6 +61,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Controls.Add(button7);
             panel1.Controls.Add(button6);
             panel1.Controls.Add(comboBox2);
             panel1.Controls.Add(comboBox1);
@@ -81,6 +83,18 @@
             panel1.Size = new Size(285, 478);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.Khaki;
+            button6.ForeColor = Color.Black;
+            button6.Location = new Point(60, 393);
+            button6.Name = "button6";
+            button6.Size = new Size(168, 29);
+            button6.TabIndex = 17;
+            button6.Text = "Manage COURSES";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // comboBox2
             // 
@@ -287,17 +301,17 @@
             label10.TabIndex = 9;
             label10.Text = "ADMIN PANEL";
             // 
-            // button6
+            // button7
             // 
-            button6.BackColor = Color.Khaki;
-            button6.ForeColor = Color.Black;
-            button6.Location = new Point(60, 417);
-            button6.Name = "button6";
-            button6.Size = new Size(168, 29);
-            button6.TabIndex = 17;
-            button6.Text = "Manage COURSES";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
+            button7.BackColor = Color.Khaki;
+            button7.ForeColor = Color.Black;
+            button7.Location = new Point(60, 437);
+            button7.Name = "button7";
+            button7.Size = new Size(166, 29);
+            button7.TabIndex = 18;
+            button7.Text = "Manage GRADES";
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // Main_Page
             // 
@@ -349,5 +363,6 @@
         private ComboBox comboBox1;
         private Label label10;
         private Button button6;
+        private Button button7;
     }
 }

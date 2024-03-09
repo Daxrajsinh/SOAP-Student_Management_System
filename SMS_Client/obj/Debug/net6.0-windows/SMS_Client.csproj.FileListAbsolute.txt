@@ -49,6 +49,7 @@ C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\bin\Debu
 C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debug\net6.0-windows\SMS_Client.csproj.AssemblyReference.cache
 C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debug\net6.0-windows\SMS_Client.Courses_page.resources
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debug\net6.0-windows\SMS_Client.Grades_page.resources
 C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debug\net6.0-windows\SMS_Client.Login_page.resources
 C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debug\net6.0-windows\SMS_Client.Main_Page.resources
 C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debug\net6.0-windows\SMS_Client.Properties.Resources.resources
