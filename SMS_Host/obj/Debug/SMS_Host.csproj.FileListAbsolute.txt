@@ -1,0 +1,15 @@
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\obj\Debug\SMS_Host.csproj.AssemblyReference.cache
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\obj\Debug\SMS_Host.csproj.SuggestedBindingRedirects.cache
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\obj\Debug\SMS_Host.Form1.resources
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\obj\Debug\SMS_Host.Properties.Resources.resources
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\obj\Debug\SMS_Host.csproj.GenerateResource.cache
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\obj\Debug\SMS_Host.csproj.CoreCompileInputs.cache
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\bin\Debug\SMS_Host.exe.config
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\bin\Debug\SMS_Host.exe
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\bin\Debug\SMS_Host.pdb
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\bin\Debug\SMS_Services.dll
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\bin\Debug\SMS_Services.pdb
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\bin\Debug\SMS_Services.dll.config
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\obj\Debug\SMS_Host.csproj.CopyComplete
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\obj\Debug\SMS_Host.exe
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Host\obj\Debug\SMS_Host.pdb

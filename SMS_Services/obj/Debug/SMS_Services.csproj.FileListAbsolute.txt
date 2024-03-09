@@ -1,0 +1,7 @@
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Services\bin\Debug\SMS_Services.dll.config
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Services\bin\Debug\SMS_Services.dll
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Services\bin\Debug\SMS_Services.pdb
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Services\obj\Debug\SMS_Services.csproj.AssemblyReference.cache
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Services\obj\Debug\SMS_Services.csproj.CoreCompileInputs.cache
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Services\obj\Debug\SMS_Services.dll
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Services\obj\Debug\SMS_Services.pdb
