@@ -14,20 +14,20 @@ namespace SMS_Services.Services
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["Con_string"].ConnectionString;
 
-        public void DeleteStudentData(int id)
+        public void DeleteStudentData(int id_no)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 string query = "DELETE FROM Students WHERE SId = @Id";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Id", id);
+                command.Parameters.AddWithValue("@Id", id_no);
                 command.ExecuteNonQuery();
 
-                /*string deleteUserQuery = "DELETE FROM Users WHERE Id = @Id)";
+                string deleteUserQuery = "DELETE FROM Users WHERE Id = @Id";
                 SqlCommand deleteUserCommand = new SqlCommand(deleteUserQuery, connection);
-                deleteUserCommand.Parameters.AddWithValue("@Id", id);
-                deleteUserCommand.ExecuteNonQuery();*/
+                deleteUserCommand.Parameters.AddWithValue("@Id", id_no);
+                deleteUserCommand.ExecuteNonQuery();
             }
         }
     }
