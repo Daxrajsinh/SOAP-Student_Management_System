@@ -158,6 +158,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(800, 450);
             Controls.Add(label4);
@@ -170,6 +171,7 @@
             Controls.Add(label1);
             Controls.Add(panel1);
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Login_page";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";

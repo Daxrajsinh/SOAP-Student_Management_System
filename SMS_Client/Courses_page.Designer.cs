@@ -151,6 +151,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
             Controls.Add(button3);
@@ -158,6 +159,8 @@
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Courses_page";
             Text = "Courses_page";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

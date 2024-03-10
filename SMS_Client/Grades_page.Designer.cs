@@ -153,12 +153,15 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(800, 450);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Controls.Add(label4);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Grades_page";
             Text = "Grades_page";
             panel1.ResumeLayout(false);

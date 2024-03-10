@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button7 = new Button();
             button6 = new Button();
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
@@ -53,7 +54,6 @@
             button5 = new Button();
             label1 = new Label();
             label10 = new Label();
-            button7 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -83,6 +83,18 @@
             panel1.Size = new Size(285, 478);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
+            // 
+            // button7
+            // 
+            button7.BackColor = Color.Khaki;
+            button7.ForeColor = Color.Black;
+            button7.Location = new Point(60, 437);
+            button7.Name = "button7";
+            button7.Size = new Size(166, 29);
+            button7.TabIndex = 18;
+            button7.Text = "Manage GRADES";
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // button6
             // 
@@ -301,22 +313,12 @@
             label10.TabIndex = 9;
             label10.Text = "ADMIN PANEL";
             // 
-            // button7
-            // 
-            button7.BackColor = Color.Khaki;
-            button7.ForeColor = Color.Black;
-            button7.Location = new Point(60, 437);
-            button7.Name = "button7";
-            button7.Size = new Size(166, 29);
-            button7.TabIndex = 18;
-            button7.Text = "Manage GRADES";
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
-            // 
             // Main_Page
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(1095, 491);
             Controls.Add(label10);
             Controls.Add(label1);
@@ -327,6 +329,8 @@
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Main_Page";
             Text = "Main_Page";
             panel1.ResumeLayout(false);
