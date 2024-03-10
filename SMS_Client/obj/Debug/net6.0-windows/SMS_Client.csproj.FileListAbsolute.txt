@@ -53,6 +53,7 @@ C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debu
 C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debug\net6.0-windows\SMS_Client.Login_page.resources
 C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debug\net6.0-windows\SMS_Client.Main_Page.resources
 C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debug\net6.0-windows\SMS_Client.Properties.Resources.resources
+C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debug\net6.0-windows\SMS_Client.Student_page.resources
 C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debug\net6.0-windows\SMS_Client.csproj.GenerateResource.cache
 C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debug\net6.0-windows\SMS_Client.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\daxra\Desktop\WSD_project\Student_Management_System\SMS_Client\obj\Debug\net6.0-windows\SMS_Client.AssemblyInfoInputs.cache

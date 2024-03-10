@@ -149,6 +149,12 @@ namespace disp_ServiceRef
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDisplayService/GetStudents", ReplyAction="http://tempuri.org/IDisplayService/GetStudentsResponse")]
         System.Threading.Tasks.Task<disp_ServiceRef.Student[]> GetStudentsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDisplayService/GetStudentInfo", ReplyAction="http://tempuri.org/IDisplayService/GetStudentInfoResponse")]
+        disp_ServiceRef.Student GetStudentInfo(int studentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDisplayService/GetStudentInfo", ReplyAction="http://tempuri.org/IDisplayService/GetStudentInfoResponse")]
+        System.Threading.Tasks.Task<disp_ServiceRef.Student> GetStudentInfoAsync(int studentId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -209,6 +215,16 @@ namespace disp_ServiceRef
         public System.Threading.Tasks.Task<disp_ServiceRef.Student[]> GetStudentsAsync()
         {
             return base.Channel.GetStudentsAsync();
+        }
+        
+        public disp_ServiceRef.Student GetStudentInfo(int studentId)
+        {
+            return base.Channel.GetStudentInfo(studentId);
+        }
+        
+        public System.Threading.Tasks.Task<disp_ServiceRef.Student> GetStudentInfoAsync(int studentId)
+        {
+            return base.Channel.GetStudentInfoAsync(studentId);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

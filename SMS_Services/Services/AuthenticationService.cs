@@ -13,27 +13,30 @@ namespace SMS_Services.Services
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["Con_string"].ConnectionString;
 
-        public bool isValidated(string uname, string passwd)
+        public (bool isValid, string role, int studentId) ValidateUser(string username, string password)
         {
             bool isValid = false;
+            string role = "";
+            int studentId = -1; // Default value if not found
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
+                string query = "SELECT COUNT(*), Role, Id FROM Users WHERE Username = @Username AND Password = @Password GROUP BY Role, Id";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Username", uname);
-                command.Parameters.AddWithValue("@Password", passwd);
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@Password", password);
 
-                int count = (int)command.ExecuteScalar();
-
-                if (count > 0)
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
                 {
                     isValid = true;
+                    role = reader["Role"].ToString();
+                    studentId = Convert.ToInt32(reader["Id"]);
                 }
             }
 
-            return isValid;
+            return (isValid, role, studentId);
         }
     }
 }

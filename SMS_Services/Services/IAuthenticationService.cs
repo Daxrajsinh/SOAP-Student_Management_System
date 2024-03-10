@@ -11,6 +11,6 @@ namespace SMS_Services.Services
     public interface IAuthenticationService
     {
         [OperationContract]
-        bool isValidated(string uname, string passwd);
+        (bool isValid, string role, int studentId) ValidateUser(string username, string password);
     }
 }

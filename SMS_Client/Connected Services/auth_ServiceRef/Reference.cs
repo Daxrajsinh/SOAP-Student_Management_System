@@ -16,11 +16,11 @@ namespace auth_ServiceRef
     public interface IAuthenticationService
     {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/isValidated", ReplyAction="http://tempuri.org/IAuthenticationService/isValidatedResponse")]
-        bool isValidated(string uname, string passwd);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/ValidateUser", ReplyAction="http://tempuri.org/IAuthenticationService/ValidateUserResponse")]
+        System.ValueTuple<bool, string, int> ValidateUser(string username, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/isValidated", ReplyAction="http://tempuri.org/IAuthenticationService/isValidatedResponse")]
-        System.Threading.Tasks.Task<bool> isValidatedAsync(string uname, string passwd);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/ValidateUser", ReplyAction="http://tempuri.org/IAuthenticationService/ValidateUserResponse")]
+        System.Threading.Tasks.Task<System.ValueTuple<bool, string, int>> ValidateUserAsync(string username, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -73,14 +73,14 @@ namespace auth_ServiceRef
         {
         }
         
-        public bool isValidated(string uname, string passwd)
+        public System.ValueTuple<bool, string, int> ValidateUser(string username, string password)
         {
-            return base.Channel.isValidated(uname, passwd);
+            return base.Channel.ValidateUser(username, password);
         }
         
-        public System.Threading.Tasks.Task<bool> isValidatedAsync(string uname, string passwd)
+        public System.Threading.Tasks.Task<System.ValueTuple<bool, string, int>> ValidateUserAsync(string username, string password)
         {
-            return base.Channel.isValidatedAsync(uname, passwd);
+            return base.Channel.ValidateUserAsync(username, password);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

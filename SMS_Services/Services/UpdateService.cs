@@ -47,7 +47,7 @@ namespace SMS_Services.Services
                 string query = @"UPDATE Students SET Grades = @Grades WHERE SId = @StudentId";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Grades", grade);
-                command.Parameters.AddWithValue("@StudentId", studentId);
+                command.Parameters.AddWithValue("@StudentId", studentId);                
                 command.ExecuteNonQuery();
             }
         }

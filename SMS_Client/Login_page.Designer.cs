@@ -83,7 +83,6 @@
             label5.Size = new Size(119, 27);
             label5.TabIndex = 0;
             label5.Text = "STUDENT";
-            label5.Click += label5_Click;
             // 
             // label1
             // 
@@ -119,7 +118,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(179, 27);
             textBox1.TabIndex = 4;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -175,6 +173,7 @@
             Name = "Login_page";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Login_page_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

@@ -1,3 +1,6 @@
+using System;
+using System.Windows.Forms;
+
 namespace SMS_Client
 {
     public partial class Login_page : Form
@@ -7,29 +10,33 @@ namespace SMS_Client
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "" || textBox2.Text == "")
             {
                 MessageBox.Show("Missing Information");
-                //label4.Text = "Missing Information";
             }
             else
             {
                 auth_ServiceRef.AuthenticationServiceClient sc1 = new auth_ServiceRef.AuthenticationServiceClient();
-                bool flag = sc1.isValidated(textBox1.Text, textBox2.Text);
+                (bool isValid, string role, int id) = sc1.ValidateUser(textBox1.Text, textBox2.Text);
 
-                if (flag)
+                if (isValid)
                 {
-                    //label4.Text = "DONE !";
-                    Main_Page obj = new Main_Page();
-                    obj.Show();
-                    this.Hide();
+                    if (role == "admin")
+                    {
+                        // Navigate to admin page
+                        Main_Page obj = new Main_Page();
+                        obj.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        // Navigate to Student page
+                        Student_page obj = new Student_page(id);
+                        obj.Show();
+                        this.Hide();
+                    }
                 }
                 else
                 {
@@ -44,7 +51,7 @@ namespace SMS_Client
             textBox2.Text = "";
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void Login_page_Load(object sender, EventArgs e)
         {
 
         }

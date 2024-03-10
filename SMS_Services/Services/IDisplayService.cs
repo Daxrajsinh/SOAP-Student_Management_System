@@ -13,6 +13,8 @@ namespace SMS_Services.Services
     {
         [OperationContract]
         List<Student> GetStudents();
+        [OperationContract]
+        Student GetStudentInfo(int studentId);
     }
     /*
     [DataContract]
