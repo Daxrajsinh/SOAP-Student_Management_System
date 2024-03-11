@@ -46,14 +46,18 @@
             label16 = new Label();
             label17 = new Label();
             panel1 = new Panel();
+            button2 = new Button();
             button1 = new Button();
             comboBox1 = new ComboBox();
             label19 = new Label();
             label18 = new Label();
             panel2 = new Panel();
+            dataGridView1 = new DataGridView();
             label20 = new Label();
+            button3 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -212,6 +216,8 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(label19);
@@ -220,6 +226,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(259, 448);
             panel1.TabIndex = 17;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(11, 162);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 4;
+            button2.Text = "Enroll";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -261,11 +277,22 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ActiveBorder;
+            panel2.Controls.Add(dataGridView1);
             panel2.Controls.Add(label20);
             panel2.Location = new Point(555, 101);
             panel2.Name = "panel2";
-            panel2.Size = new Size(233, 230);
+            panel2.Size = new Size(233, 307);
             panel2.TabIndex = 18;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(23, 60);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(186, 214);
+            dataGridView1.TabIndex = 1;
             // 
             // label20
             // 
@@ -275,6 +302,16 @@
             label20.Size = new Size(186, 20);
             label20.TabIndex = 0;
             label20.Text = "Courses You're enrolled in :";
+            // 
+            // button3
+            // 
+            button3.Location = new Point(12, 203);
+            button3.Name = "button3";
+            button3.Size = new Size(94, 29);
+            button3.TabIndex = 5;
+            button3.Text = "Deenroll";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // Student_page
             // 
@@ -309,6 +346,7 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -339,5 +377,8 @@
         private Panel panel2;
         private Label label20;
         private Button button1;
+        private Button button2;
+        private DataGridView dataGridView1;
+        private Button button3;
     }
 }

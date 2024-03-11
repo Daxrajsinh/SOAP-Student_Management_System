@@ -77,6 +77,24 @@ namespace mngCourse_ServiceRef
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageCourse/DeleteCourse", ReplyAction="http://tempuri.org/IManageCourse/DeleteCourseResponse")]
         System.Threading.Tasks.Task DeleteCourseAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageCourse/AddCourseForStudent", ReplyAction="http://tempuri.org/IManageCourse/AddCourseForStudentResponse")]
+        void AddCourseForStudent(int studentId, int courseId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageCourse/AddCourseForStudent", ReplyAction="http://tempuri.org/IManageCourse/AddCourseForStudentResponse")]
+        System.Threading.Tasks.Task AddCourseForStudentAsync(int studentId, int courseId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageCourse/GetCoursesForStudent", ReplyAction="http://tempuri.org/IManageCourse/GetCoursesForStudentResponse")]
+        mngCourse_ServiceRef.Course[] GetCoursesForStudent(int studentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageCourse/GetCoursesForStudent", ReplyAction="http://tempuri.org/IManageCourse/GetCoursesForStudentResponse")]
+        System.Threading.Tasks.Task<mngCourse_ServiceRef.Course[]> GetCoursesForStudentAsync(int studentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageCourse/RemoveCourseForStudent", ReplyAction="http://tempuri.org/IManageCourse/RemoveCourseForStudentResponse")]
+        void RemoveCourseForStudent(int studentId, int courseId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageCourse/RemoveCourseForStudent", ReplyAction="http://tempuri.org/IManageCourse/RemoveCourseForStudentResponse")]
+        System.Threading.Tasks.Task RemoveCourseForStudentAsync(int studentId, int courseId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -167,6 +185,36 @@ namespace mngCourse_ServiceRef
         public System.Threading.Tasks.Task DeleteCourseAsync(int id)
         {
             return base.Channel.DeleteCourseAsync(id);
+        }
+        
+        public void AddCourseForStudent(int studentId, int courseId)
+        {
+            base.Channel.AddCourseForStudent(studentId, courseId);
+        }
+        
+        public System.Threading.Tasks.Task AddCourseForStudentAsync(int studentId, int courseId)
+        {
+            return base.Channel.AddCourseForStudentAsync(studentId, courseId);
+        }
+        
+        public mngCourse_ServiceRef.Course[] GetCoursesForStudent(int studentId)
+        {
+            return base.Channel.GetCoursesForStudent(studentId);
+        }
+        
+        public System.Threading.Tasks.Task<mngCourse_ServiceRef.Course[]> GetCoursesForStudentAsync(int studentId)
+        {
+            return base.Channel.GetCoursesForStudentAsync(studentId);
+        }
+        
+        public void RemoveCourseForStudent(int studentId, int courseId)
+        {
+            base.Channel.RemoveCourseForStudent(studentId, courseId);
+        }
+        
+        public System.Threading.Tasks.Task RemoveCourseForStudentAsync(int studentId, int courseId)
+        {
+            return base.Channel.RemoveCourseForStudentAsync(studentId, courseId);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

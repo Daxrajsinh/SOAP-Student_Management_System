@@ -18,6 +18,12 @@ namespace SMS_Services.Services
         void UpdateCourse(Course course);
         [OperationContract]
         void DeleteCourse(int id);
+        [OperationContract]
+        void AddCourseForStudent(int studentId, int courseId);
+        [OperationContract]
+        Course[] GetCoursesForStudent(int studentId);
+        [OperationContract]
+        void RemoveCourseForStudent(int studentId, int courseId);
 
     }
     [DataContract]
