@@ -8,6 +8,7 @@ namespace SMS_Client
         public Login_page()
         {
             InitializeComponent();
+            textBox2.UseSystemPasswordChar = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,6 +53,11 @@ namespace SMS_Client
         }
 
         private void Login_page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
