@@ -13,6 +13,7 @@ namespace SMS_Client
     public partial class Student_page : Form
     {
         private int StudentId;
+        private List<mngCourse_ServiceRef.Course> courses = new List<mngCourse_ServiceRef.Course>();
         public Student_page(int StudentId)
         {
             InitializeComponent();
@@ -60,7 +61,7 @@ namespace SMS_Client
 
             // Fetch courses for the current student
             mngCourse_ServiceRef.ManageCourseClient sc4 = new mngCourse_ServiceRef.ManageCourseClient();
-            mngCourse_ServiceRef.Course[] courses = sc4.GetCoursesForStudent(StudentId);
+            courses = sc4.GetCoursesForStudent(StudentId).ToList();
 
             dataGridView1.Columns.Add("CourseName", "Course Name");
             // Display course names in the DataGridView
@@ -97,19 +98,15 @@ namespace SMS_Client
             mngCourse_ServiceRef.ManageCourseClient sc4 = new mngCourse_ServiceRef.ManageCourseClient();
             string selectedCourseName = comboBox1.SelectedItem.ToString();
 
-            // Retrieve the array of courses
             mngCourse_ServiceRef.Course[] courses = sc4.GetCourses();
 
-            // Find the course object with the selected name
             mngCourse_ServiceRef.Course selectedCourse = courses.FirstOrDefault(course => course.CourseName == selectedCourseName);
 
-            // Check if the selected course is found
             if (selectedCourse != null)
             {
-                // Add the course for the student
                 sc4.AddCourseForStudent(StudentId, selectedCourse.CourseId);
                 MessageBox.Show("You've enrolled in this course successfully !");
-                DisplayCourses(); // Call method to refresh displayed courses
+                DisplayCourses();
             }
             else
             {
@@ -123,21 +120,25 @@ namespace SMS_Client
             string selectedCourseName = comboBox1.SelectedItem.ToString();
             mngCourse_ServiceRef.Course[] courses = sc4.GetCourses();
 
-            // Find the course object with the selected name
             mngCourse_ServiceRef.Course selectedCourse = courses.FirstOrDefault(course => course.CourseName == selectedCourseName);
 
-            // Check if the selected course is found
             if (selectedCourse != null)
             {
-                // Remove the course for the student
                 sc4.RemoveCourseForStudent(StudentId, selectedCourse.CourseId);
                 MessageBox.Show("You've successfully unenrolled from this course !");
-                DisplayCourses(); // Call method to refresh displayed courses
+                DisplayCourses();
             }
             else
             {
                 MessageBox.Show("Selected course not found!");
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Download_page obj = new Download_page(courses, StudentId);
+            obj.Show();
+            this.Hide();
         }
     }
 }

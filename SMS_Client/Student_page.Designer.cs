@@ -46,6 +46,7 @@
             label16 = new Label();
             label17 = new Label();
             panel1 = new Panel();
+            button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             comboBox1 = new ComboBox();
@@ -54,7 +55,7 @@
             panel2 = new Panel();
             dataGridView1 = new DataGridView();
             label20 = new Label();
-            button3 = new Button();
+            button4 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -216,6 +217,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
@@ -226,6 +228,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(259, 448);
             panel1.TabIndex = 17;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(12, 203);
+            button3.Name = "button3";
+            button3.Size = new Size(94, 29);
+            button3.TabIndex = 5;
+            button3.Text = "Deenroll";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -303,15 +315,17 @@
             label20.TabIndex = 0;
             label20.Text = "Courses You're enrolled in :";
             // 
-            // button3
+            // button4
             // 
-            button3.Location = new Point(12, 203);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 5;
-            button3.Text = "Deenroll";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            button4.BackColor = Color.Khaki;
+            button4.ForeColor = Color.Black;
+            button4.Location = new Point(11, 257);
+            button4.Name = "button4";
+            button4.Size = new Size(126, 61);
+            button4.TabIndex = 6;
+            button4.Text = "View Materials";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // Student_page
             // 
@@ -380,5 +394,6 @@
         private Button button2;
         private DataGridView dataGridView1;
         private Button button3;
+        private Button button4;
     }
 }

@@ -25,7 +25,7 @@ namespace SMS_Client
             disp_ServiceRef.Student[] studentArray = sc3.GetStudents();
             sc3.Close();
             List<disp_ServiceRef.Student> students = studentArray.ToList();
-            dataGridView1.AutoGenerateColumns = false; // Disable auto-generation of columns
+            dataGridView1.AutoGenerateColumns = false;
 
             dataGridView1.Columns.Clear();
             dataGridView1.Columns.Add("SId", "Student ID");
@@ -36,7 +36,6 @@ namespace SMS_Client
             dataGridView1.Columns.Add("Sem", "Semester");
             dataGridView1.Columns.Add("Fees_paid", "Fees Paid");
 
-            // Set the values for each cell from the list of students
             foreach (var student in students)
             {
                 dataGridView1.Rows.Add(
@@ -82,10 +81,10 @@ namespace SMS_Client
                 add_ServiceRef.Student student = new add_ServiceRef.Student
                 {
                     SName = textBox2.Text,
-                    SAddress = textBox3.Text, // Assuming textBox2 is for SAddress
-                    SEmail = textBox4.Text, // Assuming textBox3 is for SEmail
-                    SPhone_no = textBox5.Text, // Assuming textBox4 is for SPhone_no
-                    Sem = Convert.ToInt32(comboBox1.SelectedItem), // Assuming comboBox1 is for Sem
+                    SAddress = textBox3.Text,
+                    SEmail = textBox4.Text,
+                    SPhone_no = textBox5.Text,
+                    Sem = Convert.ToInt32(comboBox1.SelectedItem),
                     Fees_paid = (string)comboBox2.SelectedItem
                 };
 
@@ -111,10 +110,10 @@ namespace SMS_Client
                 {
                     SId = Convert.ToInt32(textBox1.Text),
                     SName = textBox2.Text,
-                    SAddress = textBox3.Text, // Assuming textBox2 is for SAddress
-                    SEmail = textBox4.Text, // Assuming textBox3 is for SEmail
-                    SPhone_no = textBox5.Text, // Assuming textBox4 is for SPhone_no
-                    Sem = Convert.ToInt32(comboBox1.SelectedItem), // Assuming comboBox1 is for Sem
+                    SAddress = textBox3.Text,
+                    SEmail = textBox4.Text,
+                    SPhone_no = textBox5.Text, 
+                    Sem = Convert.ToInt32(comboBox1.SelectedItem),
                     Fees_paid = (string)comboBox2.SelectedItem
                 };
 

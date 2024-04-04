@@ -26,13 +26,12 @@ namespace SMS_Client
 
             List<mngCourse_ServiceRef.Course> courses = new List<mngCourse_ServiceRef.Course>(courseArray);
 
-            dataGridView1.AutoGenerateColumns = false; // Disable auto-generation of columns
+            dataGridView1.AutoGenerateColumns = false;
 
             dataGridView1.Columns.Clear();
             dataGridView1.Columns.Add("CourseId", "Course ID");
             dataGridView1.Columns.Add("CourseName", "Course Name");
 
-            // Add courses to DataGridView manually
             foreach (var course in courses)
             {
                 dataGridView1.Rows.Add(course.CourseId, course.CourseName);
@@ -102,6 +101,13 @@ namespace SMS_Client
         private void button4_Click(object sender, EventArgs e)
         {
             Main_Page obj = new Main_Page();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Upload_Page obj = new Upload_Page();
             obj.Show();
             this.Hide();
         }

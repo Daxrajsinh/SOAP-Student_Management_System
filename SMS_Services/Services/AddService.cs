@@ -47,7 +47,6 @@ namespace SMS_Services.Services
                 catch (SqlException ex)
                 {
                     Console.WriteLine("Error: " + ex.Message);
-                    // You can handle the error here, such as logging it or displaying an error message to the user
                 }
             }
         }

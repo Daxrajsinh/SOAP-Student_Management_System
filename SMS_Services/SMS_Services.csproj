@@ -41,6 +41,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
@@ -50,14 +51,17 @@
     <Compile Include="Services\AuthenticationService.cs" />
     <Compile Include="Services\DeleteService.cs" />
     <Compile Include="Services\DisplayService.cs" />
+    <Compile Include="Services\FileService.cs" />
     <Compile Include="Services\IAddService.cs" />
     <Compile Include="Services\IAuthenticationService.cs" />
     <Compile Include="Services\IDeleteService.cs" />
     <Compile Include="Services\IDisplayService.cs" />
     <Compile Include="Services\IManageCourse.cs" />
     <Compile Include="Services\IUpdateService.cs" />
+    <Compile Include="Services\IUploadDocs.cs" />
     <Compile Include="Services\ManageCourse.cs" />
     <Compile Include="Services\UpdateService.cs" />
+    <Compile Include="Services\UploadDocs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

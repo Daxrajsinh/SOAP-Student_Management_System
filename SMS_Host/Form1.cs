@@ -13,6 +13,7 @@ namespace SMS_Host
         private ServiceHost displayServiceHost;
         private ServiceHost updateServiceHost;
         private ServiceHost ManageCourseserviceHost;
+        private ServiceHost UploadDocsserviceHost;
 
         public Form1()
         {
@@ -51,6 +52,11 @@ namespace SMS_Host
             ManageCourseserviceHost = new ServiceHost(typeof(SMS_Services.Services.ManageCourse), manageCourseServiceUri);
             ManageCourseserviceHost.Open();
 
+            // Host UploadDocs
+            Uri uploadDocsServiceUri = new Uri("net.tcp://localhost:8006/Design_Time_Addresses/SMS_Services/Services/UploadDocs/");
+            UploadDocsserviceHost = new ServiceHost(typeof(SMS_Services.Services.UploadDocs), uploadDocsServiceUri);
+            UploadDocsserviceHost.Open();
+
             label1.Text = "Services Running... !";
         }
 
@@ -63,6 +69,8 @@ namespace SMS_Host
             deleteServiceHost.Close();
             displayServiceHost.Close();
             updateServiceHost.Close();
+            ManageCourseserviceHost.Close();
+            UploadDocsserviceHost.Close();
         }
     }
 }

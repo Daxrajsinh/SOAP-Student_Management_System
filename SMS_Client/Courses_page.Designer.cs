@@ -39,6 +39,7 @@
             button4 = new Button();
             textBox1 = new TextBox();
             label2 = new Label();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -95,6 +96,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Controls.Add(button5);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(button4);
@@ -147,6 +149,16 @@
             label2.TabIndex = 0;
             label2.Text = "Course Name :";
             // 
+            // button5
+            // 
+            button5.Location = new Point(18, 313);
+            button5.Name = "button5";
+            button5.Size = new Size(162, 29);
+            button5.TabIndex = 5;
+            button5.Text = "Upload Material";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
             // Courses_page
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -183,5 +195,6 @@
         private Label label2;
         private TextBox textBox2;
         private Label label3;
+        private Button button5;
     }
 }

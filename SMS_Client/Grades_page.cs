@@ -32,7 +32,6 @@ namespace SMS_Client
             dataGridView1.Columns.Add("SName", "Name");
             dataGridView1.Columns.Add("Grades", "Grade");
 
-            // Set the values for each cell from the list of students
             foreach (var student in students)
             {
                 dataGridView1.Rows.Add(
@@ -61,7 +60,6 @@ namespace SMS_Client
                 sc5.UpdateStudentGrade(studentId, grade);
                 sc5.Close();
 
-                // Optionally, display a message to indicate the grade update
                 MessageBox.Show("Grade updated successfully!");
                 DisplayGrades();
             }
@@ -78,7 +76,6 @@ namespace SMS_Client
                 sc5.DeleteStudentGrade(studentId);
                 sc5.Close();
 
-                // Optionally, display a message to indicate the grade update
                 MessageBox.Show("Grade Deleted successfully!");
                 DisplayGrades();
             }
